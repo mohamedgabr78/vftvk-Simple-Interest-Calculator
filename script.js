@@ -15,6 +15,10 @@ function compute() {
   let years = document.getElementById("years").value;
   let total = ((amount * rate) / 100) * years;
 
+  if (amount || rate || years === 0) {
+    alert("enter positive value");
+  }
+
   let x = 2021;
   x += parseInt(years);
   document.getElementById("final_amount").innerHTML =
