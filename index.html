@@ -1,16 +1,48 @@
 <html>
-    <head>
+  <head>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simple Interest Calculator</h1>
+      <div class="calu">
+        <div class="row">
+          <span>Amount</span>
+          <input
+            type="number"
+            id="amount"
+            min="0"
+            onchange="changeRate()"
+            required
+          />
+        </div>
+        <div class="row">
+          <span>Rate</span>
+          <input type="range" id="rate" max="30" onchange="changeRate()" />
+          <span id="current_rate"></span>
+        </div>
+        <div class="row">
+          <span>No. of Years</span>
+          <select class="row" id="years" onchange="changeRate()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+          </select>
+        </div>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
+        <div onclick="compute()" id="btn"></div>
+        <p id="result">
+          <span class="result" id="final_amount"></span><br />
+          <span class="result" id="final_rate"></span> <br />
+          <span class="result" id="total"></span><br />
+          <span class="result" id="final_year"></span>
+        </p>
+      </div>
+    </div>
+  </body>
 </html>

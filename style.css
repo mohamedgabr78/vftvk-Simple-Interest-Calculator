@@ -1,4 +1,43 @@
-body {background-color:tan;}
-h1{color:green;}
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: gray;
+  /* margin-bottom: 90px; */
+  font-size: 2.5rem;
+}
+.container {
+  background-color: white;
+  width: 35vw;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.row {
+  margin: 5px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+span {
+  margin-right: 10px;
+  width: 90px;
+}
 
+#btn {
+  background-color: gray;
+  width: 70px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
 
+  justify-content: center;
+  align-items: center;
+}
